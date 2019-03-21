@@ -417,3 +417,10 @@ tracing:
 #     resource:
 #       name: memory
 #       targetAverageUtilization: 60
+## Set timeouts for incoming requests
+#  https://docs.traefik.io/configuration/commons/#timeouts
+#  This is recommended if using GKE.
+#  https://cloud.google.com/load-balancing/docs/https/#timeouts_and_retries
+#  When enabled idleTimeout = "620s".
++respondingTimeouts:
++  enabled: false
